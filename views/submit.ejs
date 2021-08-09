@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="form-submit">
+      <div class="container">
+        <h1>Form Submission</h1>
+        <form class="form" action="/submit" method="POST">
+          <label for="name">Name:</label>
+          <input class="text" type="text" id="name" name="name" />
+          <label for="email">Email:</label>
+          <input class="text" type="email" name="email" id="email" novalidate />
+          <label for="phone">Phone No:</label>
+          <input class="text" type="text" name="phone" id="phone" />
+          <label for="gender" placeholder="male">Select Gender:</label>
+
+          <input class="radio" type="radio" name="gender" value="female" /> Male
+          <input class="radio" type="radio" name="gender" value="female" />
+          Female
+          <br />
+          <label for="hobbie">Hobbies: </label>
+          <input type="checkbox" name="hobbie" id="hobbie" /> Driving
+          <input type="checkbox" name="hobbie" id="hobbie" /> Dancing
+          <input type="checkbox" name="hobbie" id="hobbie" /> Cooking
+          <input type="checkbox" name="hobbie" id="hobbie" /> Singing
+          <br />
+          <input class="btn btn-success mb-3" type="submit" value="Submit" />
+        </form>
+        <script>
+          function closeMsgHandler() {
+            var element = document.getElementById("msg");
+            element.classList.add("displayNone");
+          }
+        </script>
+        <% if(typeof alert != 'undefined') { %> <% alert.forEach(function(error)
+        { %>
+        <div
+          id="msg"
+          class="alert alert-danger alert-dismissible fade show"
+          role="alert"
+        >
+          <%= error.msg %>
+          <!-- <button
+            onclick="myFunction()"
+            type="button"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+
+        <% }) %> <% } %>
+      </div>
+    </section>
+  </body>
+</html>

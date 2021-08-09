@@ -1,0 +1,45 @@
+body {
+  background: rgb(233, 229, 229);
+  color: rgb(136, 93, 30);
+}
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  margin: 2rem 10rem;
+  border: 1px solid whitesmoke;
+  width: 400px;
+  height: 600px;
+  border-radius: 5px;
+  padding: 10rem;
+  background: rgb(219, 213, 219);
+}
+.displayNone {
+  opacity: 0;
+}
+
+.form .text {
+  display: block;
+  width: 100%;
+  justify-content: center;
+  border: 2px solid royalblue;
+  border-radius: 5px;
+  padding: 1rem 0;
+}
+.form .text:hover {
+  border: 1px solid rgb(202, 71, 19);
+}
+h1 {
+  text-align: center;
+  color: brown;
+}
+.btn {
+  display: inline-block;
+  color: azure;
+  background: cadetblue;
+  border: 1px solid red;
+  width: 100%;
+}
